@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send GET Request</title>
+    <script>
+        function sendGetRequest() {
+            const url = "https://script.google.com/macros/s/AKfycbyxorSJX__yQOdFyWvo4I7hNsQ9xXRgDvrk1hwaRxeqkVIk1E1m9-th9bfPOkQo3SXxGw/exec";
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    console.log(data);
+                    alert("GET request sent!");
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+</head>
+<body>
+    <button onclick="sendGetRequest()">清除文字雲</button>
+</body>
+</html>
